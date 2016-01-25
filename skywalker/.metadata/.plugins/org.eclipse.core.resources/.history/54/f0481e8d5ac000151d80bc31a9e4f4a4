@@ -1,0 +1,8 @@
+var HeaderCtrl = function($scope) {
+	$scope.appDetails = {
+	page: "brew.co.nf",
+	about: "about",
+	stock: "stock",
+	recipe: "recipe",
+	settings: "settings"};
+}

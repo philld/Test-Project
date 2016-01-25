@@ -1,0 +1,19 @@
+var HeaderCtrl = function($scope) {
+	$scope.appDetails = {
+	page: "brew.co.nf",
+	navb1: "stock",
+	navb2: "recipe",
+	navb3: "about",
+	dropdown: "settings",
+	dd1: "preferences",
+	dd2: "email",
+	dd3: "about me",
+	dd4: "logout",
+	dd5: "",
+	ddhead:"header"}
+	
+var JumboCtrl = function($scope) {
+  	header: "Welcome to brew.co.nf",
+	tagline: "brew.co.nf is everything your brewing business needs to succeed, whether a small homebrewer or multinational brewer brew.co.nf will help you run you brewery & succeed.",
+	button: "Learn More >>"};
+}

@@ -1,0 +1,14 @@
+var HeaderCtrl = function($scope) {
+	$scope.appDetails = {
+	page: "brew.co.nf",
+	navb1: "about",
+	navb2: "stock",
+	navb3: "recipe",
+	dropdown: "settings",
+	dd1: "preferences",
+	dd2: "email",
+	dd3: "about me",
+	dd4: "logout",
+	dd5: "",
+	ddhead:"header"};
+}

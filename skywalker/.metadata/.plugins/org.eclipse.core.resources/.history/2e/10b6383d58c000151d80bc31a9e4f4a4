@@ -1,0 +1,5 @@
+var HeaderCtrl = function($scope) {
+	$scope.appDetails = {
+
+	};
+}
