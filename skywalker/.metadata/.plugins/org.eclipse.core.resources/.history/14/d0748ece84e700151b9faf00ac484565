@@ -1,0 +1,19 @@
+<div class="container-fluid" ng-controller="StockCtrl">
+	<div class = "container">
+	<p></p>
+	<p></p>
+	<p></p>
+	<div class="bs-example" data-example-id="hoverable-table"> 
+		<table class="table table-hover"> 
+			<thead> <tr> <th>Grain</th> <th>Weight (kg)</th> <th>EBC</th> <th>SRM</th></tr> </thead> 
+			<tbody> <tr> 
+				<th scope="row">{{Stock.grain1}}</th> <td>12</td> <td>3</td> <td>50</td> </tr> <tr> 
+				<th scope="row">CaraMunich</th> <td>11</td> <td>4</td> <td>70</td> </tr> <tr>
+				<th scope="row">Pilsner</th> <td>5.5</td> <td>5</td> <td>25</td> </tr> 
+			</tbody> 
+		</table> 
+		
+	</div>
+	
+	</div>
+</div>

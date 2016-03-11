@@ -1,0 +1,27 @@
+<?php
+//create db connection
+include 'sql_connect.php';
+
+//run sql select statement
+$result = mysqli_query($db_connect,"SELECT * FROM Grain where InStock = 1 order by name");
+
+echo "<table border='1'>
+<tr>
+<th>name</th>
+<th>location</th>
+<th>date/time added</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result))
+  {
+  echo "<tr>";
+  echo "<td>" . $row['name'] . "</td>";
+  echo "<td>" . $row['location'] . "</td>";
+  echo "<td>" . $row['date_added'] . "</td";
+  echo "</tr>";
+  }
+echo "</table>";
+
+//close db connection
+include 'sql_close.php';
+?>

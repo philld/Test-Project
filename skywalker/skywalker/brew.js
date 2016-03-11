@@ -1,4 +1,24 @@
-var myApp = angular.module("myApp", []);
+var myApp = angular.module("myApp", ["ngRoute"]);
+
+myApp.config(function($routeProvider) {
+	$routeProvider
+		.when("/about", {
+			templateUrl: "partials/about.html",
+		})
+		.when("/stock", {
+			templateUrl: "partials/stock.html",
+		})
+		.when("/brewery", {
+			templateUrl: "partials/brewery.html"
+		})
+		.when("/recipe", {
+			templateUrl: "partials/recipe.html"
+		})
+	.otherwise({
+		redirectTo: "/about"
+	});
+});
+
 
 myApp.controller("HeaderCtrl", function($scope) {
 	$scope.appDetails = {};
@@ -12,14 +32,14 @@ myApp.controller("HeaderCtrl", function($scope) {
 	$scope.appDetails.dd3 = "about me";
 	$scope.appDetails.dd4 ="logout";
 	$scope.appDetails.dd5 ="";
-	$scope.appDetails.ddhead ="header";
+	$scope.appDetails.ddhead ="system";
 });
 	
 	
 myApp.controller("JumboCtrl", function($scope) {
 	$scope.appDetails = {};
 	$scope.appDetails.header = "Welcome to brew.co.nf";
-	$scope.appDetails.tagline =  "brew.co.nf is everything your brewing business needs to succeed, whether a small homebrewer or multinational brew.co.nf will help you run your brewery with all the tools you need succeed.";
+	$scope.appDetails.tagline =  "brew.co.nf is everything your brewing business needs to succeed, whether a small homebrewer or multinational brew.co.nf will help you run your brewery with all the tools you need to succeed.";
 	$scope.appDetails.button = "Learn More >>";
 });
 
@@ -35,3 +55,20 @@ myApp.controller("ContCtrl", function($scope) {
 	$scope.appDetails.button2 = "Learn More >>";
 	$scope.appDetails.button3 = "Learn More >>";
 });
+
+myApp.controller("StockCtrl", function($scope) {
+	$scope.appDetails = {};
+	$scope.appDetails.grain1 = "Marris Otter Pale";
+	$scope.appDetails.grain2 = "Caramunich";
+	$scope.appDetails.grain3 = "CaraGold";
+	$scope.appDetails.grainWeight1 =  "12";
+	$scope.appDetails.grainWeight2 =  "3.25";
+	$scope.appDetails.grainWeight3 =  "2.2";
+	$scope.appDetails.grainEBC1 = "22";
+	$scope.appDetails.grainEBC2 = "56";
+	$scope.appDetails.grainEBC3 = "76";
+	$scope.appDetails.grainSRM1 = "12";
+	$scope.appDetails.grainSRM2 = "11";
+	$scope.appDetails.grainSRM3 = "8";
+});
+
